@@ -125,6 +125,10 @@ html{
 
     scroll-behavior:smooth;
 
+    max-width:100%;
+
+    overflow-x:hidden;
+
 }
 
 
@@ -140,7 +144,20 @@ body{
 
     overflow-x:hidden;
 
+    max-width:100%;
+
     -webkit-font-smoothing:antialiased;
+
+}
+
+@supports (overflow-x:clip){
+
+    html,
+    body{
+
+        overflow-x:clip;
+
+    }
 
 }
 
@@ -561,6 +578,32 @@ textarea{
 
 @media (max-width:480px){
 
+    .hero-badge,
+    .section-badge,
+    .contact-list li,
+    .conditions-list li,
+    .schedule-list li{
+
+        max-width:100%;
+
+        min-width:0;
+
+    }
+
+    .conditions-card,
+    .testimonial-card,
+    .contact-card,
+    .location-card,
+    .footer-cta-card{
+
+        padding:28px 20px;
+
+        min-width:0;
+
+        max-width:100%;
+
+    }
+
     .btn{
 
         width:100%;
@@ -583,7 +626,7 @@ HEADER
 
     right:0;
 
-    width:100%;
+    width:auto;
 
     box-sizing:border-box;
 
@@ -876,6 +919,22 @@ HEADER SCROLL
 }
 
 @media (max-width:992px){
+
+    section,
+    footer,
+    .container,
+    .hero-container,
+    .about-grid,
+    .testimonials-grid,
+    .contact-wrapper,
+    .location-grid,
+    .footer-grid{
+
+        min-width:0;
+
+        max-width:100%;
+
+    }
 
     .header{
 
@@ -1175,6 +1234,10 @@ HERO
 
     justify-content:center;
 
+    width:100%;
+
+    min-width:0;
+
 }
 
 .hero-circle{
@@ -1260,6 +1323,20 @@ justify-content:center;
 .hero-image{
 
 margin-top:40px;
+
+overflow:hidden;
+
+}
+
+.hero-circle{
+
+width:min(520px, 90vw);
+
+height:min(520px, 90vw);
+
+left:50%;
+
+transform:translateX(-50%);
 
 }
 
@@ -2604,4 +2681,74 @@ padding:50px 35px;
     width:100%;
     
    box-sizing:border-box;
+}
+
+@media (max-width:992px){
+
+    .hero,
+    .features,
+    .about,
+    .team,
+    .testimonials,
+    .contact,
+    .location,
+    .footer-cta,
+    .footer{
+
+        overflow-x:clip;
+
+    }
+
+    .hero-container,
+    .features-grid,
+    .about-grid,
+    .team-grid,
+    .testimonials-grid,
+    .contact-wrapper,
+    .location-grid,
+    .footer-grid{
+
+        max-width:100%;
+
+        min-width:0;
+
+    }
+
+    .feature-card,
+    .conditions-card,
+    .team-card,
+    .testimonial-card,
+    .contact-card,
+    .location-card,
+    .footer-cta-card{
+
+        max-width:100%;
+
+        min-width:0;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .conditions-card,
+    .testimonial-card,
+    .contact-card,
+    .location-card,
+    .footer-cta-card{
+
+        padding-inline:20px;
+
+    }
+
+    .hero-badge,
+    .section-badge{
+
+        max-width:100%;
+
+        white-space:normal;
+
+    }
+
 }
