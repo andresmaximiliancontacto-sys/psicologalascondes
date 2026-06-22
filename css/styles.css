@@ -650,6 +650,7 @@ MENU
 
 .nav-menu{
 
+    
     display:flex;
 
     flex-direction:row;
@@ -2482,3 +2483,6 @@ padding:50px 35px;
     visibility:visible;
 }
 
+{
+    box-sizing: border-box;
+}
