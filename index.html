@@ -38,7 +38,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 HEADER
 ========================================== -->
 
-<header class="header">
+<header class="header" id="header">
 
     <div class="container">
 
@@ -56,33 +56,37 @@ HEADER
 
             <!-- Navegación -->
 
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
 
-                <li>
-                    <a class="active" href="#inicio">
-                        Inicio
-                    </a>
-                </li>
+    <li>
+        <a class="nav-link active" href="#inicio">
+            <i class="fa-solid fa-house"></i>
+            Inicio
+        </a>
+    </li>
 
-                <li>
-                    <a href="#servicios">
-                        Servicios
-                    </a>
-                </li>
+    <li>
+        <a class="nav-link" href="#servicios">
+            <i class="fa-solid fa-heart-circle-plus"></i>
+            Servicios
+        </a>
+    </li>
 
-                <li>
-                    <a href="#contacto">
-                        Contacto
-                    </a>
-                </li>
+    <li>
+        <a class="nav-link" href="#contacto">
+            <i class="fa-solid fa-envelope"></i>
+            Contacto
+        </a>
+    </li>
 
-                <li>
-                    <a href="#nosotros">
-                        Nosotros
-                    </a>
-                </li>
+    <li>
+        <a class="nav-link" href="#nosotros">
+            <i class="fa-solid fa-user-group"></i>
+            Nosotros
+        </a>
+    </li>
 
-            </ul>
+</ul>
 
             <!-- Botón -->
 
@@ -96,7 +100,7 @@ HEADER
 
             <!-- Hamburguesa -->
 
-            <button class="menu-toggle">
+            <button class="menu-toggle" id="menu-toggle">
 
                 <span></span>
                 <span></span>
@@ -550,14 +554,6 @@ CONTACTO
                     </li>
 
                 </ul>
-
-                <div class="isapres-logos">
-
-                <img
-                    src="assets/images/isapres.webp"
-                    alt="Isapres">
-
-            </div>
 
                 <div class="logos">
 
@@ -1099,4 +1095,6 @@ FOOTER
     </div>
 
 </footer>
-
+<div id="menu-overlay"></div>
+<script src="js/script.js"></script>
+</body>

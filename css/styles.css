@@ -652,6 +652,8 @@ MENU
 
     display:flex;
 
+    flex-direction:row;
+
     align-items:center;
 
     gap:10px;
@@ -745,6 +747,9 @@ BOTÓN HEADER
 
     transition:.35s;
 
+    position:relative;
+
+    overflow:hidden;
 }
 
 
@@ -772,8 +777,6 @@ MENU MOBILE
     width:48px;
 
     height:48px;
-
-    display:none;
 
     flex-direction:column;
 
@@ -859,13 +862,27 @@ HEADER SCROLL
 
     .nav-menu{
 
+        position:fixed;
+        top:90px;
+        left:20px;
+        right:20px;
+
         display:none;
+        flex-direction:column;
+
+        background:white;
+
+        border-radius:20px;
+
+        padding:20px;
+
+        box-shadow:0 20px 40px rgba(0,0,0,.15);
 
     }
 
-    .nav-button{
+    .nav-menu.active{
 
-        display:none;
+        display:flex;
 
     }
 
@@ -875,46 +892,59 @@ HEADER SCROLL
 
     }
 
-}
+    .nav-button{
+        display:none;
+    }
 
-.nav-button{
+    .nav-menu a{
 
-    position:relative;
+        color:#23334D;
 
-    overflow:hidden;
+        width:100%;
 
-}.nav-button::before{
+        justify-content:flex-start;
+        
+        display:flex;
 
-    content:"";
+        align-items:center;
 
-    position:absolute;
+        gap:14px;
 
-    top:0;
+        color:#23334D;
 
-    left:-120%;
+        width:100%;
 
-    width:60%;
+        padding:14px 18px;
 
-    height:100%;
+        border-radius:14px;
 
-    background:
+        justify-content:flex-start;
 
-        linear-gradient(
-            120deg,
-            transparent,
-            rgba(255,255,255,.55),
-            transparent
-        );
+        border:1px solid transparent;
 
-    transition:.8s;
+        transition:.3s;
+    }
+    }
 
-}
+    .nav-menu a i{
 
-.nav-button:hover::before{
+        width:24px;
 
-    left:140%;
+        text-align:center;
 
-}
+        color:var(--primary);
+
+        font-size:1rem;
+    }
+
+    .nav-menu a:hover{
+
+        background:#EDF5FF;
+
+        border-color:#DCEEFF;
+
+        transform:translateX(4px);
+    }
 
 /*==================================================
 HERO
@@ -2429,5 +2459,26 @@ padding:50px 35px;
 
 }
 
+}
+
+.menu-overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:900;
+}
+
+.menu-overlay.active{
+
+    opacity:1;
+    visibility:visible;
 }
 
