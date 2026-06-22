@@ -593,11 +593,15 @@ HEADER
 
     height:var(--header-height);
 
+    width:100%;
+
     display:flex;
 
     align-items:center;
 
     justify-content:space-between;
+
+    gap:16px;
 
     padding:0 28px;
 
@@ -632,6 +636,8 @@ HEADER
     align-items:center;
 
     gap:14px;
+
+    min-width:0;
 
 }
 
@@ -775,11 +781,17 @@ MENU MOBILE
 
 .menu-toggle{
 
+    display:none;
+
     width:48px;
 
     height:48px;
 
+    flex:0 0 48px;
+
     flex-direction:column;
+
+    align-items:center;
 
     justify-content:center;
 
@@ -861,12 +873,37 @@ HEADER SCROLL
 
 @media (max-width:992px){
 
+    .header .container{
+
+        width:calc(100% - 24px);
+
+        max-width:calc(100vw - 24px);
+
+    }
+
+    .navbar{
+
+        min-width:0;
+
+        padding:0 14px 0 18px;
+
+    }
+
+    .logo img{
+
+        max-width:150px;
+
+    }
+
     .nav-menu{
 
         position:fixed;
         top:90px;
-        left:20px;
-        right:20px;
+        left:12px;
+        right:12px;
+        width:auto;
+        max-width:calc(100vw - 24px);
+        box-sizing:border-box;
 
         display:none;
         flex-direction:column;
@@ -925,7 +962,6 @@ HEADER SCROLL
 
         transition:.3s;
     }
-    }
 
     .nav-menu a i{
 
@@ -947,6 +983,39 @@ HEADER SCROLL
         transform:translateX(4px);
     }
 
+}
+
+@media (max-width:480px){
+
+    .header .container{
+
+        width:calc(100% - 16px);
+
+        max-width:calc(100vw - 16px);
+
+    }
+
+    .navbar{
+
+        padding:0 10px 0 14px;
+
+    }
+
+    .logo img{
+
+        max-width:132px;
+
+    }
+
+    .nav-menu{
+
+        left:8px;
+        right:8px;
+        max-width:calc(100vw - 16px);
+
+    }
+
+}
 /*==================================================
 HERO
 ==================================================*/
