@@ -2483,7 +2483,8 @@ padding:50px 35px;
     visibility:visible;
 }
 
-*{
-    box-sizing:border-box;
+.menu-container{
+    width:100%;
     
+   box-sizing:border-box;
 }
